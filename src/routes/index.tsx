@@ -135,7 +135,7 @@ function Navbar() {
     >
       <div className={`mx-auto max-w-7xl px-6 flex items-center justify-between rounded-full transition-all duration-500 ${scrolled ? "glass py-3 px-6" : ""}`}>
         <a href="#" className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 to-purple-500 grid place-items-center font-black text-[#020818]">H</div>
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[color:var(--bronze)] to-[color:var(--navy)] grid place-items-center font-black text-[#FFFFFF]">H</div>
           <span className="font-black text-lg tracking-tight">HomePack · هوم باك</span>
         </a>
         <div className="hidden md:flex items-center gap-7 text-sm text-[color:var(--navy)]/80">
@@ -174,8 +174,8 @@ function Hero() {
         backgroundImage: `radial-gradient(600px circle at ${light.x}% ${light.y}%, rgba(0,212,255,0.18), transparent 40%)`,
       }}
     >
-      <div className="orb" style={{ width: 500, height: 500, background: "#00D4FF", top: -100, right: -100 }} />
-      <div className="orb" style={{ width: 400, height: 400, background: "#7B61FF", bottom: -80, left: -100, animationDelay: "3s" }} />
+      <div className="orb" style={{ width: 500, height: 500, background: "#8B6F47", top: -100, right: -100 }} />
+      <div className="orb" style={{ width: 400, height: 400, background: "#2F3E50", bottom: -80, left: -100, animationDelay: "3s" }} />
 
       <motion.div style={{ opacity }} className="relative mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-10 items-center w-full">
         <motion.div style={{ y: y1 }} className="lg:col-span-7">
@@ -255,8 +255,8 @@ function WaveDivider() {
       <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="wg" x1="0" x2="1">
-            <stop offset="0" stopColor="#00D4FF" stopOpacity="0.25" />
-            <stop offset="1" stopColor="#7B61FF" stopOpacity="0.25" />
+            <stop offset="0" stopColor="#8B6F47" stopOpacity="0.25" />
+            <stop offset="1" stopColor="#2F3E50" stopOpacity="0.25" />
           </linearGradient>
         </defs>
         <path d="M0,40 C320,80 720,0 1440,40 L1440,80 L0,80 Z" fill="url(#wg)">
@@ -308,8 +308,8 @@ function SectionHeading({ eyebrow, title, sub }: any) {
 /* ============ Features ============ */
 function Features() {
   const items = [
-    { icon: "◆", title: "متانة استثنائية", desc: "كرتون مقوى متعدد الطبقات يتحمل الشحن الدولي وأقسى ظروف النقل.", color: "#00D4FF" },
-    { icon: "♻", title: "صديق للبيئة", desc: "١٠٠٪ قابل لإعادة التدوير، مصنوع من ألياف معاد تدويرها بمعايير عالمية.", color: "#7B61FF" },
+    { icon: "◆", title: "متانة استثنائية", desc: "كرتون مقوى متعدد الطبقات يتحمل الشحن الدولي وأقسى ظروف النقل.", color: "#8B6F47" },
+    { icon: "♻", title: "صديق للبيئة", desc: "١٠٠٪ قابل لإعادة التدوير، مصنوع من ألياف معاد تدويرها بمعايير عالمية.", color: "#2F3E50" },
     { icon: "⚡", title: "توصيل سريع", desc: "شبكة لوجستية تغطي ٤٠+ دولة، تسليم خلال ٤٨ ساعة محلياً.", color: "#F5A623" },
   ];
   return (
@@ -350,10 +350,10 @@ function Features() {
 /* ============ Products ============ */
 function Products() {
   const items = [
-    { name: "صناديق الشحن", tag: "الأكثر طلباً", desc: "صناديق مقواة لشحن دولي آمن.", gradient: "from-cyan-500/20 to-blue-700/30", span: "md:col-span-2 md:row-span-2", h: "h-[460px]" },
-    { name: "التغليف المخصص", tag: "تصميم حصري", desc: "اطبع علامتك التجارية بدقة عالية.", gradient: "from-purple-500/20 to-pink-600/20", span: "md:col-span-2", h: "h-[220px]" },
-    { name: "صناديق البيتزا", tag: "مطاعم", desc: "كرتون عازل للحرارة، طباعة فاخرة.", gradient: "from-amber-400/20 to-orange-600/20", span: "", h: "h-[220px]" },
-    { name: "معدات الحماية", tag: "حلول صناعية", desc: "حشوات ووسائد امتصاص الصدمات.", gradient: "from-emerald-400/15 to-cyan-500/20", span: "", h: "h-[220px]" },
+    { name: "صناديق الشحن", tag: "الأكثر طلباً", desc: "صناديق مقواة لشحن دولي آمن.", gradient: "from-[color:var(--navy)]/20 to-[color:var(--navy)]/40", span: "md:col-span-2 md:row-span-2", h: "h-[460px]" },
+    { name: "التغليف المخصص", tag: "تصميم حصري", desc: "اطبع علامتك التجارية بدقة عالية.", gradient: "from-[color:var(--bronze)]/25 to-[color:var(--bronze)]/10", span: "md:col-span-2", h: "h-[220px]" },
+    { name: "صناديق البيتزا", tag: "مطاعم", desc: "كرتون عازل للحرارة، طباعة فاخرة.", gradient: "from-[color:var(--bronze)]/30 to-[color:var(--bronze)]/15", span: "", h: "h-[220px]" },
+    { name: "معدات الحماية", tag: "حلول صناعية", desc: "حشوات ووسائد امتصاص الصدمات.", gradient: "from-[color:var(--navy)]/20 to-[color:var(--bronze)]/15", span: "", h: "h-[220px]" },
   ];
   return (
     <section id="products" className="relative py-32 px-6">
@@ -405,8 +405,8 @@ function Stats() {
     <section className="relative py-28 px-6">
       <div className="mx-auto max-w-7xl">
         <div className="relative glass rounded-[2rem] p-12 md:p-16 overflow-hidden">
-          <div className="orb" style={{ width: 400, height: 400, background: "#7B61FF", top: -100, right: -100 }} />
-          <div className="orb" style={{ width: 300, height: 300, background: "#00D4FF", bottom: -80, left: -50, animationDelay: "4s" }} />
+          <div className="orb" style={{ width: 400, height: 400, background: "#2F3E50", top: -100, right: -100 }} />
+          <div className="orb" style={{ width: 300, height: 300, background: "#8B6F47", bottom: -80, left: -50, animationDelay: "4s" }} />
           <div className="relative grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6">
             {stats.map((s, i) => (
               <Reveal key={i} delay={i * 0.1}>
@@ -444,7 +444,7 @@ function Process() {
           <div className="hidden md:block absolute top-12 right-[16%] left-[16%] h-px">
             <motion.div
               initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 1.4 }}
-              className="h-full origin-right bg-gradient-to-l from-cyan-400/60 via-purple-500/60 to-amber-400/60"
+              className="h-full origin-right bg-gradient-to-l from-[color:var(--bronze)] via-[color:var(--bronze)]/60 to-[color:var(--navy)]/60"
             />
           </div>
           {steps.map((s, i) => (
@@ -530,11 +530,11 @@ function Sustainability() {
     <section className="relative py-32 px-6">
       <div className="mx-auto max-w-7xl">
         <div className="relative rounded-[2rem] overflow-hidden p-12 md:p-20 glass">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/15 via-cyan-500/10 to-purple-500/15" />
-          <div className="orb" style={{ width: 350, height: 350, background: "#10b981", top: -80, left: -80 }} />
+          <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--bronze)]/15 via-[color:var(--bronze)]/8 to-[color:var(--navy)]/12" />
+          <div className="orb" style={{ width: 350, height: 350, background: "#8B6F47", top: -80, left: -80 }} />
           <div className="relative grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="text-xs tracking-[0.3em] text-emerald-300 mb-3 font-mono">الاستدامة</div>
+              <div className="text-xs tracking-[0.3em] text-[color:var(--bronze)] mb-3 font-mono">الاستدامة</div>
               <h2 className="text-4xl md:text-5xl font-black leading-tight">
                 نصنع التغليف <span className="gradient-text">دون أن نؤذي الكوكب</span>.
               </h2>
@@ -570,8 +570,8 @@ function CTABanner() {
   return (
     <section className="relative py-28 px-6">
       <div className="mx-auto max-w-6xl relative rounded-[2rem] overflow-hidden p-14 md:p-24 text-center glass glass-glow">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/15 via-purple-500/20 to-amber-500/15" />
-        <div className="orb" style={{ width: 500, height: 500, background: "#00D4FF", top: "-30%", left: "20%", opacity: 0.3 }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-[color:var(--bronze)]/15 via-[color:var(--bronze)]/20 to-[color:var(--navy)]/15" />
+        <div className="orb" style={{ width: 500, height: 500, background: "#8B6F47", top: "-30%", left: "20%", opacity: 0.3 }} />
         <div className="relative">
           <Reveal>
             <h2 className="text-4xl md:text-6xl font-black leading-tight">
@@ -652,8 +652,8 @@ function Contact() {
   const [submitted, setSubmitted] = useState(false);
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
-      <div className="orb" style={{ width: 500, height: 500, background: "#7B61FF", top: "10%", right: "-15%" }} />
-      <div className="orb" style={{ width: 400, height: 400, background: "#00D4FF", bottom: "-10%", left: "-10%", animationDelay: "3s" }} />
+      <div className="orb" style={{ width: 500, height: 500, background: "#2F3E50", top: "10%", right: "-15%" }} />
+      <div className="orb" style={{ width: 400, height: 400, background: "#8B6F47", bottom: "-10%", left: "-10%", animationDelay: "3s" }} />
       <div className="mx-auto max-w-7xl relative">
         <SectionHeading
           eyebrow="تواصل معنا"
@@ -692,7 +692,7 @@ function Contact() {
               { icon: "⌖", t: "زرنا", d: "المدينة الصناعية الثانية، الرياض" },
             ].map((c, i) => (
               <div key={i} className="glass rounded-2xl p-6 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400/20 to-purple-500/20 grid place-items-center text-2xl text-[color:var(--bronze)]">{c.icon}</div>
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[color:var(--bronze)]/20 to-[color:var(--navy)]/15 grid place-items-center text-2xl text-[color:var(--bronze)]">{c.icon}</div>
                 <div>
                   <div className="text-sm text-[color:var(--navy)]/55">{c.t}</div>
                   <div className="font-bold mt-1">{c.d}</div>
@@ -727,12 +727,12 @@ function Footer() {
   ];
   return (
     <footer className="relative pt-20 pb-10 px-6 border-t border-[color:var(--navy)]/8 mt-10">
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[color:var(--bronze)]/50 to-transparent" />
       <div className="mx-auto max-w-7xl">
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-purple-500 grid place-items-center font-black text-[#020818]">H</div>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[color:var(--bronze)] to-[color:var(--navy)] grid place-items-center font-black text-[#FFFFFF]">H</div>
               <span className="font-black text-xl">HomePack · هوم باك</span>
             </div>
             <p className="mt-5 text-[color:var(--navy)]/65 max-w-sm leading-relaxed">
@@ -757,7 +757,7 @@ function Footer() {
             <p className="text-[color:var(--navy)]/65 text-sm mb-3">أحدث الأخبار في صناديقك.</p>
             <div className="glass rounded-full p-1 flex">
               <input placeholder="بريدك" className="bg-transparent px-3 py-2 text-sm flex-1 outline-none" />
-              <button className="bg-[color:var(--bronze)] text-[#020818] rounded-full px-4 text-sm font-bold">→</button>
+              <button className="bg-[color:var(--bronze)] text-[#FFFFFF] rounded-full px-4 text-sm font-bold">→</button>
             </div>
           </div>
         </div>
@@ -783,7 +783,7 @@ function Loader() {
         <motion.div
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.6 }}
-          className="fixed inset-0 z-[200] grid place-items-center bg-[#020818]"
+          className="fixed inset-0 z-[200] grid place-items-center bg-[#FFFFFF]"
         >
           <motion.div
             initial={{ scale: 0.6, opacity: 0 }}
@@ -791,7 +791,7 @@ function Loader() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-center"
           >
-            <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-500 grid place-items-center font-black text-3xl text-[#020818] mb-5">H</div>
+            <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-[color:var(--bronze)] to-[color:var(--navy)] grid place-items-center font-black text-3xl text-[#FFFFFF] mb-5">H</div>
             <div className="font-black text-2xl gradient-text">HomePack</div>
           </motion.div>
         </motion.div>
