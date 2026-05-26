@@ -29,11 +29,11 @@ function Cursor() {
     <>
       <motion.div
         style={{ x, y, translateX: "-50%", translateY: "-50%" }}
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-cyan-300 pointer-events-none z-[100] mix-blend-screen"
+        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-cyan-300 pointer-events-none z-[100] mix-blend-multiply"
       />
       <motion.div
         style={{ x: rx, y: ry, translateX: "-50%", translateY: "-50%", scale: hover ? 2 : 1 }}
-        className="fixed top-0 left-0 w-10 h-10 rounded-full border border-cyan-400/60 pointer-events-none z-[100] mix-blend-screen"
+        className="fixed top-0 left-0 w-10 h-10 rounded-full border border-[color:var(--bronze)]/60 pointer-events-none z-[100] mix-blend-multiply"
       />
     </>
   );
@@ -138,9 +138,9 @@ function Navbar() {
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 to-purple-500 grid place-items-center font-black text-[#020818]">H</div>
           <span className="font-black text-lg tracking-tight">HomePack · هوم باك</span>
         </a>
-        <div className="hidden md:flex items-center gap-7 text-sm text-white/80">
+        <div className="hidden md:flex items-center gap-7 text-sm text-[color:var(--navy)]/80">
           {links.map(l => (
-            <a key={l.href} href={l.href} className="hover:text-cyan-300 transition" data-hover>{l.label}</a>
+            <a key={l.href} href={l.href} className="hover:text-[color:var(--bronze)] transition" data-hover>{l.label}</a>
           ))}
         </div>
         <Magnetic as="a" href="#contact" className="magnetic-btn !py-2.5 !px-5 text-sm hidden sm:inline-block">
@@ -181,9 +181,9 @@ function Hero() {
         <motion.div style={{ y: y1 }} className="lg:col-span-7">
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}
-            className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs text-cyan-200 mb-6"
+            className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs text-[color:var(--bronze)] mb-6"
           >
-            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[color:var(--bronze)] animate-pulse" />
             صناعة سعودية · منذ ١٩٨٤ · ISO 9001
           </motion.div>
 
@@ -198,7 +198,7 @@ function Hero() {
 
           <motion.p
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
-            className="mt-7 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed"
+            className="mt-7 text-lg md:text-xl text-[color:var(--navy)]/70 max-w-xl leading-relaxed"
           >
             حلول تغليف صناعية متطورة، صديقة للبيئة، مصممة لأعمالك اللوجستية حول العالم. من التصميم إلى التسليم — جودة لا تساوم.
           </motion.p>
@@ -213,7 +213,7 @@ function Hero() {
 
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}
-            className="mt-12 flex flex-wrap gap-6 text-sm text-white/60"
+            className="mt-12 flex flex-wrap gap-6 text-sm text-[color:var(--navy)]/65"
           >
             {[
               { k: "ISO", v: "9001 معتمد" },
@@ -222,9 +222,9 @@ function Hero() {
             ].map((b, i) => (
               <div key={i} className="flex items-center gap-3">
                 <div className="w-11 h-11 grid place-items-center rounded-xl glass">
-                  <span className="font-mono font-bold text-cyan-300 text-xs">{b.k}</span>
+                  <span className="font-mono font-bold text-[color:var(--bronze)] text-xs">{b.k}</span>
                 </div>
-                <div className="text-white/80">{b.v}</div>
+                <div className="text-[color:var(--navy)]/80">{b.v}</div>
               </div>
             ))}
           </motion.div>
@@ -240,7 +240,7 @@ function Hero() {
             <div className="face bottom" />
           </div>
           {/* glow */}
-          <div className="absolute w-[350px] h-[350px] rounded-full bg-cyan-500/20 blur-3xl pointer-events-none" />
+          <div className="absolute w-[350px] h-[350px] rounded-full bg-[color:var(--bronze)]/20 blur-3xl pointer-events-none" />
         </motion.div>
       </motion.div>
 
@@ -289,7 +289,7 @@ function SectionHeading({ eyebrow, title, sub }: any) {
   return (
     <div className="max-w-3xl mb-14">
       <Reveal>
-        <div className="text-xs tracking-[0.3em] text-cyan-300 mb-3 font-mono">{eyebrow}</div>
+        <div className="text-xs tracking-[0.3em] text-[color:var(--bronze)] mb-3 font-mono">{eyebrow}</div>
       </Reveal>
       <Reveal delay={0.1}>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
@@ -298,7 +298,7 @@ function SectionHeading({ eyebrow, title, sub }: any) {
       </Reveal>
       {sub && (
         <Reveal delay={0.2}>
-          <p className="mt-5 text-white/65 text-lg leading-relaxed">{sub}</p>
+          <p className="mt-5 text-[color:var(--navy)]/70 text-lg leading-relaxed">{sub}</p>
         </Reveal>
       )}
     </div>
@@ -332,8 +332,8 @@ function Features() {
                   <div className="relative">
                     <div className="text-5xl mb-6" style={{ color: it.color, textShadow: `0 0 30px ${it.color}` }}>{it.icon}</div>
                     <h3 className="text-2xl font-bold mb-3">{it.title}</h3>
-                    <p className="text-white/65 leading-relaxed">{it.desc}</p>
-                    <div className="mt-6 flex items-center gap-2 text-sm text-cyan-300 opacity-0 group-hover:opacity-100 transition">
+                    <p className="text-[color:var(--navy)]/70 leading-relaxed">{it.desc}</p>
+                    <div className="mt-6 flex items-center gap-2 text-sm text-[color:var(--bronze)] opacity-0 group-hover:opacity-100 transition">
                       <span>اعرف المزيد</span> <span>←</span>
                     </div>
                   </div>
@@ -377,11 +377,11 @@ function Products() {
                   </g>
                 </svg>
                 <div className="relative h-full p-7 flex flex-col justify-end">
-                  <span className="inline-block self-start text-[10px] tracking-[0.25em] uppercase font-mono px-3 py-1 rounded-full bg-white/10 text-cyan-200 mb-3">{it.tag}</span>
+                  <span className="inline-block self-start text-[10px] tracking-[0.25em] uppercase font-mono px-3 py-1 rounded-full bg-[color:var(--navy)]/8 text-[color:var(--bronze)] mb-3">{it.tag}</span>
                   <h3 className="text-2xl md:text-3xl font-black">{it.name}</h3>
-                  <p className="mt-2 text-white/65 text-sm">{it.desc}</p>
+                  <p className="mt-2 text-[color:var(--navy)]/70 text-sm">{it.desc}</p>
                   <div className="absolute top-5 left-5 w-10 h-10 rounded-full glass grid place-items-center opacity-0 group-hover:opacity-100 transition translate-x-2 group-hover:translate-x-0">
-                    <span className="text-cyan-300">↗</span>
+                    <span className="text-[color:var(--bronze)]">↗</span>
                   </div>
                 </div>
               </Tilt>
@@ -414,7 +414,7 @@ function Stats() {
                   <div className="text-5xl md:text-6xl font-black gradient-text font-mono">
                     <Counter to={s.v} suffix={s.suf} />
                   </div>
-                  <div className="mt-3 text-white/70 text-sm md:text-base">{s.l}</div>
+                  <div className="mt-3 text-[color:var(--navy)]/70 text-sm md:text-base">{s.l}</div>
                 </div>
               </Reveal>
             ))}
@@ -456,7 +456,7 @@ function Process() {
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold">{s.t}</h3>
-                <p className="mt-3 text-white/65">{s.d}</p>
+                <p className="mt-3 text-[color:var(--navy)]/70">{s.d}</p>
               </div>
             </Reveal>
           ))}
@@ -495,11 +495,11 @@ function Testimonials() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="absolute inset-0 glass glass-glow rounded-3xl p-10 md:p-14 flex flex-col justify-center"
             >
-              <div className="flex gap-1 text-amber-400 mb-5 text-xl">{"★★★★★".split("").map((s, k) => <span key={k}>{s}</span>)}</div>
+              <div className="flex gap-1 text-[color:var(--bronze)] mb-5 text-xl">{"★★★★★".split("").map((s, k) => <span key={k}>{s}</span>)}</div>
               <p className="text-xl md:text-2xl font-medium leading-relaxed">"{items[i].q}"</p>
               <div className="mt-6">
                 <div className="font-bold">{items[i].name}</div>
-                <div className="text-white/55 text-sm">{items[i].role}</div>
+                <div className="text-[color:var(--navy)]/55 text-sm">{items[i].role}</div>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -509,14 +509,14 @@ function Testimonials() {
             <button
               key={k}
               onClick={() => setI(k)}
-              className={`h-1.5 rounded-full transition-all ${i === k ? "w-10 bg-cyan-400" : "w-4 bg-white/20"}`}
+              className={`h-1.5 rounded-full transition-all ${i === k ? "w-10 bg-[color:var(--bronze)]" : "w-4 bg-white/20"}`}
               aria-label={`اختر شهادة ${k + 1}`}
             />
           ))}
         </div>
         <div className="mt-14 flex flex-wrap justify-center gap-10 opacity-60">
           {["ARAMCO", "DHL", "SABIC", "AGTHIA", "ALMARAI", "FedEx"].map(n => (
-            <span key={n} className="font-mono font-bold tracking-widest text-white/50 hover:text-cyan-300 transition" data-hover>{n}</span>
+            <span key={n} className="font-mono font-bold tracking-widest text-[color:var(--navy)]/50 hover:text-[color:var(--bronze)] transition" data-hover>{n}</span>
           ))}
         </div>
       </div>
@@ -538,7 +538,7 @@ function Sustainability() {
               <h2 className="text-4xl md:text-5xl font-black leading-tight">
                 نصنع التغليف <span className="gradient-text">دون أن نؤذي الكوكب</span>.
               </h2>
-              <p className="mt-5 text-white/70 leading-relaxed">
+              <p className="mt-5 text-[color:var(--navy)]/70 leading-relaxed">
                 نلتزم بأعلى معايير الاستدامة البيئية في كل خطوة من سلسلة الإنتاج، من اختيار المواد إلى الطاقة المتجددة.
               </p>
               <Magnetic as="a" href="#contact" className="ghost-btn mt-8 inline-block">اطّلع على تقريرنا البيئي</Magnetic>
@@ -553,7 +553,7 @@ function Sustainability() {
                 <Reveal key={i} delay={i * 0.1}>
                   <div className="glass rounded-2xl p-6">
                     <div className="font-mono font-black text-4xl gradient-text"><Counter to={s.v} suffix={s.suf} /></div>
-                    <div className="mt-2 text-sm text-white/65">{s.l}</div>
+                    <div className="mt-2 text-sm text-[color:var(--navy)]/70">{s.l}</div>
                   </div>
                 </Reveal>
               ))}
@@ -579,7 +579,7 @@ function CTABanner() {
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 text-white/70 text-lg max-w-2xl mx-auto">ابدأ مع HomePack اليوم. عرض سعر مخصص خلال ٢٤ ساعة.</p>
+            <p className="mt-6 text-[color:var(--navy)]/70 text-lg max-w-2xl mx-auto">ابدأ مع HomePack اليوم. عرض سعر مخصص خلال ٢٤ ساعة.</p>
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
@@ -622,7 +622,7 @@ function FAQ() {
                     data-hover
                   >
                     <span className="font-bold text-lg">{it.q}</span>
-                    <motion.span animate={{ rotate: isOpen ? 45 : 0 }} className="text-2xl text-cyan-300 font-light">+</motion.span>
+                    <motion.span animate={{ rotate: isOpen ? 45 : 0 }} className="text-2xl text-[color:var(--bronze)] font-light">+</motion.span>
                   </button>
                   <AnimatePresence>
                     {isOpen && (
@@ -633,7 +633,7 @@ function FAQ() {
                         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-6 text-white/70 leading-relaxed">{it.a}</div>
+                        <div className="px-6 pb-6 text-[color:var(--navy)]/70 leading-relaxed">{it.a}</div>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -674,10 +674,10 @@ function Contact() {
                 <Field label="رقم الهاتف" name="phone" type="tel" />
               </div>
               <div>
-                <label className="block text-xs text-white/60 mb-2 tracking-wider">رسالتك</label>
+                <label className="block text-xs text-[color:var(--navy)]/65 mb-2 tracking-wider">رسالتك</label>
                 <textarea
                   rows={5}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-cyan-400 transition resize-none"
+                  className="w-full bg-white/60 border border-[color:var(--navy)]/12 rounded-xl px-4 py-3 outline-none focus:border-[color:var(--bronze)] transition resize-none"
                 />
               </div>
               <Magnetic type="submit" className="magnetic-btn w-full md:w-auto">
@@ -692,9 +692,9 @@ function Contact() {
               { icon: "⌖", t: "زرنا", d: "المدينة الصناعية الثانية، الرياض" },
             ].map((c, i) => (
               <div key={i} className="glass rounded-2xl p-6 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400/20 to-purple-500/20 grid place-items-center text-2xl text-cyan-300">{c.icon}</div>
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400/20 to-purple-500/20 grid place-items-center text-2xl text-[color:var(--bronze)]">{c.icon}</div>
                 <div>
-                  <div className="text-sm text-white/55">{c.t}</div>
+                  <div className="text-sm text-[color:var(--navy)]/55">{c.t}</div>
                   <div className="font-bold mt-1">{c.d}</div>
                 </div>
               </div>
@@ -709,10 +709,10 @@ function Contact() {
 function Field({ label, name, type = "text" }: any) {
   return (
     <div>
-      <label htmlFor={name} className="block text-xs text-white/60 mb-2 tracking-wider">{label}</label>
+      <label htmlFor={name} className="block text-xs text-[color:var(--navy)]/65 mb-2 tracking-wider">{label}</label>
       <input
         id={name} name={name} type={type}
-        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-cyan-400 transition"
+        className="w-full bg-white/60 border border-[color:var(--navy)]/12 rounded-xl px-4 py-3 outline-none focus:border-[color:var(--bronze)] transition"
       />
     </div>
   );
@@ -726,7 +726,7 @@ function Footer() {
     { t: "الدعم", l: ["تواصل معنا", "الأسئلة الشائعة", "طلب عينة", "تتبع الطلب"] },
   ];
   return (
-    <footer className="relative pt-20 pb-10 px-6 border-t border-white/5 mt-10">
+    <footer className="relative pt-20 pb-10 px-6 border-t border-[color:var(--navy)]/8 mt-10">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
       <div className="mx-auto max-w-7xl">
         <div className="grid md:grid-cols-12 gap-10">
@@ -735,37 +735,37 @@ function Footer() {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-purple-500 grid place-items-center font-black text-[#020818]">H</div>
               <span className="font-black text-xl">HomePack · هوم باك</span>
             </div>
-            <p className="mt-5 text-white/60 max-w-sm leading-relaxed">
+            <p className="mt-5 text-[color:var(--navy)]/65 max-w-sm leading-relaxed">
               بيت صناعة الكرتون والتغليف الصناعي. نخدم العالم منذ ١٩٨٤.
             </p>
             <div className="flex gap-3 mt-6">
               {["in", "X", "ig", "fb"].map(s => (
-                <a key={s} href="#" data-hover className="w-10 h-10 rounded-xl glass grid place-items-center text-white/70 hover:text-cyan-300 transition font-mono text-sm">{s}</a>
+                <a key={s} href="#" data-hover className="w-10 h-10 rounded-xl glass grid place-items-center text-[color:var(--navy)]/70 hover:text-[color:var(--bronze)] transition font-mono text-sm">{s}</a>
               ))}
             </div>
           </div>
           {cols.map((c, i) => (
             <div key={i} className="md:col-span-2">
               <h4 className="font-bold mb-4">{c.t}</h4>
-              <ul className="space-y-3 text-white/60 text-sm">
-                {c.l.map(x => <li key={x}><a href="#" data-hover className="hover:text-cyan-300 transition">{x}</a></li>)}
+              <ul className="space-y-3 text-[color:var(--navy)]/65 text-sm">
+                {c.l.map(x => <li key={x}><a href="#" data-hover className="hover:text-[color:var(--bronze)] transition">{x}</a></li>)}
               </ul>
             </div>
           ))}
           <div className="md:col-span-2">
             <h4 className="font-bold mb-4">النشرة البريدية</h4>
-            <p className="text-white/60 text-sm mb-3">أحدث الأخبار في صناديقك.</p>
+            <p className="text-[color:var(--navy)]/65 text-sm mb-3">أحدث الأخبار في صناديقك.</p>
             <div className="glass rounded-full p-1 flex">
               <input placeholder="بريدك" className="bg-transparent px-3 py-2 text-sm flex-1 outline-none" />
-              <button className="bg-cyan-400 text-[#020818] rounded-full px-4 text-sm font-bold">→</button>
+              <button className="bg-[color:var(--bronze)] text-[#020818] rounded-full px-4 text-sm font-bold">→</button>
             </div>
           </div>
         </div>
-        <div className="mt-14 pt-8 border-t border-white/5 flex flex-wrap justify-between items-center gap-4 text-xs text-white/40">
+        <div className="mt-14 pt-8 border-t border-[color:var(--navy)]/8 flex flex-wrap justify-between items-center gap-4 text-xs text-[color:var(--navy)]/40">
           <div>© ٢٠٢٦ HomePack. جميع الحقوق محفوظة.</div>
           <div className="flex gap-6">
-            <a href="#" data-hover className="hover:text-cyan-300">سياسة الخصوصية</a>
-            <a href="#" data-hover className="hover:text-cyan-300">الشروط والأحكام</a>
+            <a href="#" data-hover className="hover:text-[color:var(--bronze)]">سياسة الخصوصية</a>
+            <a href="#" data-hover className="hover:text-[color:var(--bronze)]">الشروط والأحكام</a>
           </div>
         </div>
       </div>
