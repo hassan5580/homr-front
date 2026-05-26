@@ -114,7 +114,7 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 /* ============ Navbar ============ */
-function Navbar() {
+export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 30);
@@ -719,7 +719,7 @@ function Field({ label, name, type = "text" }: any) {
 }
 
 /* ============ Footer ============ */
-function Footer() {
+export function Footer() {
   const cols = [
     { t: "المنتجات", l: ["صناديق الشحن", "التغليف المخصص", "صناديق البيتزا", "معدات الحماية"] },
     { t: "الشركة", l: ["من نحن", "الاستدامة", "المسيرة المهنية", "الأخبار"] },
