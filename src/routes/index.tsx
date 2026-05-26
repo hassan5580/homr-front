@@ -121,11 +121,11 @@ function Navbar() {
     window.addEventListener("scroll", on); return () => window.removeEventListener("scroll", on);
   }, []);
   const links = [
-    { href: "#features", label: "المميزات" },
-    { href: "#products", label: "المنتجات" },
-    { href: "#process", label: "آلية العمل" },
-    { href: "#testimonials", label: "آراء العملاء" },
-    { href: "#contact", label: "تواصل" },
+    { href: "/", label: "الرئيسية" },
+    { href: "/products", label: "المنتجات" },
+    { href: "/about", label: "من نحن" },
+    { href: "/sustainability", label: "الاستدامة" },
+    { href: "/contact", label: "اتصل بنا" },
   ];
   return (
     <motion.nav
